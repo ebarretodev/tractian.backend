@@ -3,7 +3,7 @@ import Asset from '../models/Asset';
 
 module.exports = {
     getAll: async (req: Request, res: Response) => {
-        const assets = await Asset.find()
+        const assets = await Asset.find({})
         res.json(assets)
     },
     getOne: async (req: Request, res: Response) => {
